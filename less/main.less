@@ -1,0 +1,197 @@
+.main-wrap {
+  display: flex;
+  margin-top: 95px;
+  margin-bottom: 60px;
+  @media screen and (max-width: 1200px) {
+    display: block;
+  }
+    .main-left {
+    margin-bottom: 35px;
+  }
+  @media screen and (max-width: 750px) {
+    margin-top: 40px;
+  }
+}
+.main-left {
+  width: 62%;
+  .our-projects {
+    margin-top: 0;
+    display: flex;
+    align-items: flex-start;
+    span {
+      width: 271px;
+      display: inline-block;
+      padding-top: 25px;
+      color: #414042;
+      @media screen and (max-width: 750px) {
+        width: 100% !important;
+      }
+      @media screen and (max-width: 425px) {
+        font-size: 25px;
+      }
+    }
+    img {
+      width: 46px;
+      @media screen and (max-width: 425px) {
+        margin-right: 15px;
+      }
+    }
+  }
+  @media screen and (max-width: 719px) {
+    width: 100%;
+  }
+}
+
+
+.portfolio-link {
+  color: @cyan;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  padding-left: 60px;
+  margin-top: 35px;
+  &:before {
+    content: '';
+    display: block;
+    width: 78%;
+    height: 2px;
+    background: @cyan;
+    position: absolute;
+    bottom: -3px;
+  }
+  .portfolio-link-arrow {
+    margin-left: 15px;
+    position: relative;
+    width: 18px;
+    height: 2px;
+    background: @cyan;
+    display: inline-block;
+    &:before , &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+      border-right: 0;
+    }
+    &:after {
+      border-left-color: @cyan;
+      border-width: 4px 0 4px 12px;
+      top: -3px;
+      right: -12px;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+}
+
+//=============== right column ========================
+.main-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main-right__item {
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 30px;
+  width: 350px;
+  height: 350px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  &:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 26px rgba(0,0,0,0.5);
+    .main-right__item__desc {
+      opacity: 1;
+      overflow: hidden;
+      height: 33px;
+    }
+    .main-right__item_wrap {
+      background: url("../img/overlay-project.png");
+    }
+  }
+
+  &_first {
+    background-image: url("../img/project-filter1.png"), url("../img/project1.jpg");
+    //background: url("../img/project1.jpg") center;
+  }
+  &_second {
+    background: url("../img/project-filter1.png"), url("../img/project2.jpg") center;
+  }
+  &_third {
+    background: url("../img/project-filter1.png"), url("../img/project2.jpg") center;
+  }
+  &_fourth {
+    background: url("../img/project-filter1.png"), url("../img/project2.jpg") center;
+  }
+  @media screen and (max-width: 992px) {
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+  }
+  @media screen and (max-width: 750px) {
+    margin-bottom: 30px;
+  }
+}
+.main-right__item_wrap {
+  height: 100%;
+  padding: 0 37px;
+  transition: all 0.3s ease;
+}
+.main-right__item_inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.main-right__item__title {
+  margin-bottom: 15px;
+  a {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: "Acrom ExtraBold", serif;
+    font-size: 26px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    &:hover {
+      border-bottom: 1px solid green;
+    }
+  }
+}
+.main-right__item__desc {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  display: block;
+  color: white;
+  font-family: "Robboto Light", sans-serif;
+  font-size: 14px;
+  //padding: 15px 0;
+  transition: all 0.4s ease;
+}
+.main-right__item__link {
+  margin-top: 20px;
+  a {
+    padding: 5px 14px 4px;
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    border: 1px solid @cyan;
+    transition: all 0.3s ease;
+    font-size: 12px;
+    font-family: "Acrom ExtraBold", serif;
+    border-radius: 3px;
+    &:hover {
+      background: @cyan;
+    }
+  }
+}

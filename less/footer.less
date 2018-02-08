@@ -1,0 +1,251 @@
+.footer-top-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media screen and (max-width: 986px) {
+    justify-content: center;
+  }
+}
+.footer-top {
+  background-color: @footer-t-back;
+  padding: 60px 0px;
+}
+.contact-title {
+  position: relative;
+  //margin-top: -29px;
+  img {
+    margin-right: 21px;
+    margin-bottom: 12px;
+    width: 40px;
+  }
+  span {
+    text-transform: uppercase;
+    font-size: 45px;
+    color: #414042;
+    font-weight: 700;
+    font-family: "Acrom ExtraBold", serif;
+  }
+  @media screen and (max-width: 986px) {
+    text-align: center;
+  }
+  @media screen and (max-width: 479px) {
+    span {
+      font-size: 35px;
+    }
+  }
+}
+.footer-top__right_inner {
+  padding-top: 25px;
+}
+.footer-top__left, .footer-top__right {
+  min-width: 390px;
+
+}
+.footer-top__left {
+  width: 40%;
+  @media screen and (max-width: 986px) {
+    width: 100%;
+  }
+  @media screen and (max-width: 425px) {
+    min-width: 320px;
+  }
+}
+.footer-top__right {
+  width: 54.5%;
+  @media screen and (max-width: 986px) {
+    width: 100%;
+  }
+}
+
+.contact-address {
+  padding-left: 63px;
+  padding-top: 62px;
+  @media screen and (max-width: 986px) {
+    padding-left: 0;
+
+  }
+}
+.contact-address_wrap {
+  @media screen and (max-width: 986px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+.contact-address__text {
+  a:first-child, span:first-child {
+    margin-bottom: 7px;
+  }
+}
+.contact-address__item {
+
+  display: flex;
+  align-items: center;
+  span, a {
+    display: flex;
+    color: #7d7f80;
+    font-family: "Robboto Light", sans-serif;
+  }
+}
+
+.contact-address__telephone {
+  margin-top: 41px;
+  margin-bottom: 41px;
+  .contact-address__telephone-text {
+    a {
+      text-decoration: none;
+    }
+  }
+}
+.contact-address__email-text {
+  a {
+    color: @cyan;
+  }
+}
+.contact-address__item-ico {
+  margin-right: 42px;
+}
+//contact form
+.write-us-title {
+  padding-bottom: 60px;
+  span {
+    text-transform: uppercase;
+    font-size: 45px;
+    font-weight: 700;
+    color: #414042;
+    font-family: "Acrom ExtraBold", serif;
+  }
+  @media screen and (max-width: 986px) {
+    text-align: center;
+  }
+
+}
+
+.write-us-form {
+  padding-right: 65px;
+  input, textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #989b9c;
+    font-size: 14px;
+    padding: 4px 0;
+    &:hover {
+      border-bottom: 1px solid @cyan;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  textarea {
+    width: 100%;
+    height:16px;
+    //margin-bottom: 56px;
+    //margin-top: 56px;
+  }
+  .submit_btn {
+    background-color: @cyan;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 14px;
+    font-weight: 500;
+    @media screen and (max-width: 575px) {
+      width: 100%;
+    }
+  }
+  .personal {
+    display: flex;
+    justify-content: space-between;
+  }
+  .name, .email, .message {
+    display: inline-block;
+    span {
+      display: block;
+      font-size: 10px;
+      font-family: "Robboto Light", serif;
+      color: #989b9c;
+    }
+  }
+  .name {
+    width: 50%;
+    input {
+      width: 100%;
+    }
+  }
+  .email {
+    margin-left: 20px;
+    width: 50%;
+    input {
+      width: 100%;
+    }
+  }
+  .message {
+    padding-bottom: 56px;
+    padding-top: 56px;
+    display: block;
+    input {
+      width: 99%;
+    }
+  }
+  .hidden-text {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  @media screen and (max-width: 986px) {
+    padding-left: 65px;
+  }
+}
+
+
+
+
+// footer bottom
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 25px;
+  background-color: @footer-b-back;
+
+  .footer-bottom__item {
+    span {
+      font-size: 12px;
+      color: #a3a2a3;
+      @media screen and (max-width: 575px) {
+        color: #ffffff;
+      }
+    }
+    font-family: 'Robboto Light', serif;
+    .twitter-logo {
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+    .develop-company {
+      margin-left: 6px;
+      margin-right: 12px;
+    }
+  }
+  @media screen and (max-width: 575px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    .footer-bottom__item {
+      text-align: center;
+      width: 100%;
+      padding: 15px 0;
+    }
+    .left-side {
+      background-color: @cyan;
+    }
+    .miidle-side {
+      background-color: #ffffff;
+    }
+    .right-side {
+      color: #a3a2a3;
+    }
+  }
+}
