@@ -1,47 +1,143 @@
 main
     section#main-content
-        .container
-            .main-wrap
-                .main-left
-                    .contact-title.our-projects
-                        img(src="img/cintact-us-blocks.png" alt="simple-logo" title="simple-logo")
-                        span our projects
-                    a(href='#').portfolio-link see portfolio
-                        .portfolio-link-arrow
-                .main-right
-                    .main-right__item.main-right__item_first
-                        .main-right__item_wrap
-                            .main-right__item_inner
-                                .main-right__item__title
-                                    a(href="#") hostel for students of kpi
-                                .main-right__item__desc
-                                    span Business was founded as a number of privately-held companies and some cropped rolem ipsum text
-                                .main-right__item__link
-                                    a(href='#') read more
-                    .main-right__item.main-right__item_second
-                        .main-right__item_wrap
-                            .main-right__item_inner
-                                .main-right__item__title
-                                    a(href="#") house clubs "nagornyi"
-                                .main-right__item__desc
-                                    span Business was founded as a number of privately-held companies and some cropped rolem ipsum text
-                                .main-right__item__link
-                                    a(href='#') read more
-                    .main-right__item.main-right__item_third
-                        .main-right__item_wrap
-                            .main-right__item_inner
-                                .main-right__item__title
-                                    a(href="#") residential complex "campus"
-                                .main-right__item__desc
-                                    span Business was founded as a number of privately-held companies and some cropped rolem ipsum text
-                                .main-right__item__link
-                                    a(href='#') read more
-                    .main-right__item.main-right__item_fourth
-                        .main-right__item_wrap
-                            .main-right__item_inner
-                                .main-right__item__title
-                                    a(href="#") hostel for students of kpi
-                                .main-right__item__desc
-                                    span Business was founded as a number of privately-held companies and some cropped rolem ipsum text
-                                .main-right__item__link
-                                    a(href='#') read more
+        .main-wrap
+            section.about
+                .container
+                    .about__header
+                        .section-title.about__header
+                            .cintact-us-blocks.section-title__img
+                            span
+                                | who
+                                br
+                                |  we are?
+
+                    .about-text
+                        .about-text__left
+                            .about-left__content
+                                span
+                                    | Urban Development Group (UDG) – property investment, development and management company focusing on residential and commercial property development in CEE countries. Business was founded as a number of privately-held companies and investments mostly in residential property in 2008 and structured into group of companies with same investors in 2015. UDG boasts over USD 40 million worth of property developments in its up to five year development pipeline. The group has currently 7 ha of land under development for residential and commercial purposes. Operating as an integrated property development provider, UDG business activities cover land identification and acquisition, planning, financing, resource management, project marketing, building design and construction of residential developmentscommercial offices, industrial buildings and retail centers.
+                                    | In Ukraine company making investment activity through SPV Corporate Investment Fund “UDG” which registered as public stock company and acquire funds for development via shares issue.
+                                    | Specialization of investment fund - financing of development projects such as residential buildings, complexes and quarters, investments objects are property rights for residential and commercial premises. UDG making investments into projects if able to have major influence into project concept, working with best architectors and consultants.
+
+                        .about-text__right
+                            .about-right__img
+                    a(href="#").about-text__link.portfolio-link READ MORE
+                        .arrow
+            // bug with container below
+            .container
+                section.projects
+                    .our-projects-left
+                        .section-title.our-projects
+                            .cintact-us-blocks.section-title__img
+                            span our projects
+                        a(href='#').portfolio-link see portfolio
+                            .arrow
+                    .our-projects-right
+                        .our-projects-right__item.our-projects-right__item_first
+                            .our-projects-right__item_wrap
+                                .our-projects-right__item_inner
+                                    .our-projects-right__item__title
+                                        a(href="#") hostel for students of kpi
+                                    .our-projects-right__item__desc
+                                        span Business was founded as a number of privately-held companies and some cropped rolem ipsum text
+                                    .our-projects-right__item__link
+                                        a(href='#') read more
+                        .our-projects-right__item.our-projects-right__item_second
+                            .our-projects-right__item_wrap
+                                .our-projects-right__item_inner
+                                    .our-projects-right__item__title
+                                        a(href="#") house clubs "nagornyi"
+                                    .our-projects-right__item__desc
+                                        span Business was founded as a number of privately-held companies and some cropped rolem ipsum text
+                                    .our-projects-right__item__link
+                                        a(href='#') read more
+                        .our-projects-right__item.our-projects-right__item_third
+                            .our-projects-right__item_wrap
+                                .our-projects-right__item_inner
+                                    .our-projects-right__item__title
+                                        a(href="#") residential complex "campus"
+                                    .our-projects-right__item__desc
+                                        span Business was founded as a number of privately-held companies and some cropped rolem ipsum text
+                                    .our-projects-right__item__link
+                                        a(href='#') read more
+                        .our-projects-right__item.our-projects-right__item_fourth
+                            .our-projects-right__item_wrap
+                                .our-projects-right__item_inner
+                                    .our-projects-right__item__title
+                                        a(href="#") hostel for students of kpi
+                                    .our-projects-right__item__desc
+                                        span Business was founded as a number of privately-held companies and some cropped rolem ipsum text
+                                    .our-projects-right__item__link
+                                        a(href='#') read more
+            section.numbers
+                .numbers_inner
+                    .container
+                        .counter
+                            .counter__item.counter__item_left
+                                .counter-text
+                                    span 40
+                                    span.counter-text million dollars worth of property developments
+                            .counter__item.counter__item_middle
+                                .counter-text
+                                    span 7
+                                    span.counter-text ha of land under development
+                            .counter__item.counter__item_right
+                                .counter-text
+                                    span 8
+                                    span.counter-text years in the investment market
+            section
+                .container
+                    .news-wrap
+                        .news-header
+                            .section-title.news__header
+                                .cintact-us-blocks.section-title__img
+                                span news
+                        .news
+                            .news__item
+                                .news-date
+                                    span 30
+                                    =' '
+                                    span december by
+                                    =' '
+                                    a(href='#') Alex Turnton
+                                .news-img
+                                    img(src="img/layer-5.png" alt="news prev")
+                                .news-text
+                                    .news-title
+                                        a(href="#").text-header how we do our work
+                                    .text-prev
+                                        span Operating as an integrated property development provider, UDG business activities cover land identification and acquisition, planning, financing, resource management, project marketing, building design and construction of residential developments, commercial offices, industrial buildings and retail centers. 
+                                .news-more
+                                    a(href="#") read more
+                            .news__item
+                                .news-date
+                                    span 29
+                                    =' '
+                                    span april by
+                                    =' '
+                                    a(href='#') Administrator
+                                .news-img
+                                    img(src="img/layer-6.png" alt="news prev")
+                                .news-text
+                                    .news-title
+                                        a(href="#").text-header So hopefully this gives you a tiny insight
+                                    .text-prev
+                                        span Operating as an integrated property development provider, UDG business activities cover land identification and acquisition, planning, financing, resource management, project marketing, building design and construction of residential developments, commercial offices, industrial buildings and retail centers. 
+                                .news-more
+                                    a(href="#") read more
+                            .news__item
+                                .news-date
+                                    span 17
+                                    =' '
+                                    span april by
+                                    =' '
+                                    a(href='#') Sophi Black
+                                .news-img
+                                    img(src="img/layer-7.png" alt="news prev")
+                                .news-text
+                                    .news-title
+                                        a(href="#").text-header six metres below the ocean's surface, Hurawalhi Maldives'
+                                    .text-prev
+                                        span Operating as an integrated property development provider, UDG business activities cover land identification and acquisition, planning, financing, resource management, project marketing, building design and construction of residential developments, commercial offices, industrial buildings and retail centers. 
+                                .news-more
+                                    a(href="#") read more

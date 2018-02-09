@@ -17,8 +17,8 @@ $(document).ready(function(){
 
     $('.main-slider').slick({
         arrows: true,
-        prevArrow: $('.main-slider-nav__prev'),
-        nextArrow: $('.main-slider-nav__next'),
+        prevArrow: $('.main-slider-nav .arrow-left'),
+        nextArrow: $('.main-slider-nav .arrow-right'),
         adaptiveHeight: true
         //setting-name: setting-value
     });

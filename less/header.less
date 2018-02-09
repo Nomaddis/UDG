@@ -47,7 +47,7 @@ header {
 .logo-title {
   width: 30px;
   color: #ffffff;
-  font-family: "Robboto Light", serif;
+  font-family: "Roboto Light", serif;
   font-size: 12px;
   padding-left: 30px;
 }
@@ -72,7 +72,7 @@ header {
     margin: 0;
     li {
       display: inline-block;
-      font-family: 'Robboto Light', sans-serif;
+      font-family: 'Roboto Light', sans-serif;
       padding: 10px 0 ;
       margin-right: 43px;
       border-top: 2px solid transparent;
@@ -463,43 +463,47 @@ header {
   width:100%!important
 }
 //slider navigation, arrows
-.main-slider-nav__next, .main-slider-nav__prev {
-  position: relative;
-  width: 18px;
-  height: 2px;
-  background: #ffffff;
+//.main-slider-nav__next, .main-slider-nav__prev {
+//  position: relative;
+//  width: 18px;
+//  height: 2px;
+//  background: #ffffff;
+//  cursor: pointer;
+//  &:before , &:after {
+//    content: "";
+//    display: block;
+//    position: absolute;
+//    width: 0;
+//    height: 0;
+//    border: 10px solid transparent;
+//    border-right: 0;
+//  }
+//  &:after {
+//    border-left-color: #ffffff;
+//    border-width: 4px 0 4px 12px;
+//  }
+//}
+//.main-slider-nav__prev {
+//  &:after {
+//    top: -3px;
+//    left: -12px;
+//    border-left-color: #ffffff;
+//    border-width: 4px 0 4px 12px;
+//    transform: rotate(180deg);
+//  }
+//}
+//
+//.main-slider-nav__next {
+// // margin-left: 50px;
+//  &:after {
+//    top: -3px;
+//    right: -12px;
+//
+//  }
+//}
+
+.arrow-left, .arrow-right {
   cursor: pointer;
-  &:before , &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-right: 0;
-  }
-  &:after {
-    border-left-color: #ffffff;
-    border-width: 4px 0 4px 12px;
-  }
-}
-.main-slider-nav__prev {
-  &:after {
-    top: -3px;
-    left: -12px;
-    border-left-color: #ffffff;
-    border-width: 4px 0 4px 12px;
-    transform: rotate(180deg);
-  }
-}
-
-.main-slider-nav__next {
- // margin-left: 50px;
-  &:after {
-    top: -3px;
-    right: -12px;
-
-  }
 }
 .main-slider-nav {
   padding-left: 17px;
