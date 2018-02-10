@@ -4,6 +4,7 @@ var pug = require('gulp-pug'),
     browserSync = require("browser-sync"),
     path = require('path'),
     reload = browserSync.reload;
+const autoprefixer = require('gulp-autoprefixer');
 var config = {
     server: {
         baseDir: "./web"
@@ -32,6 +33,13 @@ gulp.task('watch', ['browser-sync'], function(){
     gulp.watch('less/**/*.less', ['less', browserSync.reload]);
     gulp.watch('pug/**/*.pug', ['pug', browserSync.reload]);
     // Other watchers
-})
-
+});
+gulp.task('autoprefixer', function() {
+    gulp.src('web/css/all.css')
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('web/css/'));
+});
 gulp.task('default', ['browser-sync', 'watch']);
