@@ -6,7 +6,7 @@ $(document).ready(function(){
 
     $('.button_wrap').on("click", function(){
         search_form_wrap.toggleClass('active');
-        console.log('button search click');
+        //console.log('button search click');
     });
 
     $('.search_close').on("click", function () {
@@ -30,9 +30,12 @@ $(document).ready(function(){
 
     /* --------------- main slider end -------------------------*/
 
+    /**
+     * Plugin for correct zoom images
+     */
     $('.box').each(function() {
         //set size
-        var th = $(this).height(),//box height
+        let th = $(this).height(),//box height
             tw = $(this).width(),//box width
             im = $(this).children('img'),//image
             ih = im.height(),//inital image height
@@ -43,7 +46,7 @@ $(document).ready(function(){
             im.addClass('wh').removeClass('ww');//set height 100%
         }
         //set offset
-        var nh = im.height(),//new image height
+        let nh = im.height(),//new image height
             nw = im.width(),//new image width
             hd = (nh-th)/2,//half dif img/box height
             wd = (nw-tw)/2;//half dif img/box width
@@ -60,7 +63,7 @@ $(document).ready(function(){
     $(".main-slider-scroll").on("click","a", function (event) {
 
         event.preventDefault();
-        var id  = $(this).attr('href'),
+        let id  = $(this).attr('href'),
 
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 1300);
@@ -79,8 +82,45 @@ $(document).ready(function(){
         })
         .focusout(function () {
             $(this).siblings('span').toggleClass('active');
-        })
+        });
+/*
+*change lang text on click
+ */
+    $('.dropdown-content a').on("click", function () {
+        $('.dropbtn__lang').html(this.innerHTML);
+    });
 
-
+/**
+* change counter
+*  must be request for some API with asking for counter object
+*  @counter object from server with actual numbers
+ */
+    let counter = {
+        worth: 41,
+        land: 8,
+        years: 9
+    };
+    window.setTimeout(
+        () => {
+            $('.counter-text__item_worth').fadeOut(
+                1000,
+                function () {
+                    $('.counter-text__item_worth').html(counter.worth).fadeIn(1000);
+                }
+            );
+            $('.counter-text__item_land').fadeOut(
+                1000,
+                function () {
+                    $('.counter-text__item_land').html(counter.land).fadeIn(1000);
+                }
+            );
+            $('.counter-text__item_years').fadeOut(
+                1000,
+                function () {
+                    $('.counter-text__item_years').html(counter.years).fadeIn(1000);
+                }
+            );
+        }
+    , 1000);
 });
 

@@ -3,7 +3,8 @@ var pug = require('gulp-pug'),
     less = require('gulp-less');
     browserSync = require("browser-sync"),
     path = require('path'),
-    reload = browserSync.reload;
+    reload = browserSync.reload,
+    uglify = require('gulp-uglify');
 const autoprefixer = require('gulp-autoprefixer');
 var config = {
     server: {
@@ -32,6 +33,8 @@ gulp.task('browser-sync', function () {
 gulp.task('watch', ['browser-sync'], function(){
     gulp.watch('less/**/*.less', ['less', browserSync.reload]);
     gulp.watch('pug/**/*.pug', ['pug', browserSync.reload]);
+    gulp.watch('web/js/*.js', ['babel', browserSync.reload]);
+    gulp.watch('web/css/**/*.css', ['autoprefixer', browserSync.reload]);
     // Other watchers
 });
 gulp.task('autoprefixer', function() {
@@ -42,4 +45,13 @@ gulp.task('autoprefixer', function() {
         }))
         .pipe(gulp.dest('web/css/'));
 });
+const babel = require('gulp-babel');
+
+gulp.task('babel', () =>
+    gulp.src('web/js/main.js')
+        .pipe(babel({
+            presets: ['env']
+        }))
+        .pipe(gulp.dest('web/js/babel'))
+);
 gulp.task('default', ['browser-sync', 'watch']);

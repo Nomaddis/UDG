@@ -108,7 +108,7 @@
 }
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 740px;
   }
 }
 @media (min-width: 992px) {
@@ -693,6 +693,7 @@ header {
   align-items: center;
 }
 .show-mobile-menu {
+  z-index: 200;
   display: none;
   margin-left: 15px;
 }
@@ -746,6 +747,9 @@ header {
   .show-mobile-menu {
     display: inline-block;
   }
+}
+.show-mobile-menu__btn:hover {
+  cursor: pointer;
 }
 .dropbtn {
   cursor: pointer;
@@ -803,6 +807,10 @@ header {
 }
 .dropdown-content a:hover {
   color: #bed62f;
+}
+.dropbtn__lang {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -969,7 +977,7 @@ header {
   font-family: "Acrom ExtraBold", serif;
   display: block;
   margin-top: 32px;
-  max-height: 159px;
+  max-height: 143px;
   overflow: hidden;
   font-size: 65px;
   font-weight: 400;
@@ -1077,6 +1085,7 @@ header {
 main {
   background: url(../img/slanting-bg.png);
   background-position: -22px -57px;
+  background-repeat: no-repeat;
   padding-top: 70px;
 }
 .about__header {
@@ -1122,7 +1131,7 @@ main {
 }
 @media screen and (max-width: 991px) {
   .about-text__left {
-    width: 100%;
+    width: 94%;
   }
 }
 .about-right__img {
@@ -1190,10 +1199,11 @@ main {
 }
 @media screen and (max-width: 991px) {
   .about-left__content {
-    width: 100%;
+    width: 96%;
     margin-bottom: 25px;
-    padding-left: 0px;
-    padding-right: 0px;
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 .section-title {
@@ -1279,8 +1289,16 @@ main {
 .projects .our-projects span {
   padding-top: 21px;
 }
+@media screen and (max-width: 320px) {
+  .projects .our-projects {
+    padding-left: 0;
+  }
+  .projects .our-projects .section-title__img {
+    margin-right: 0;
+  }
+}
 .our-projects-left {
-  width: 58%;
+  width: 53%;
   margin-bottom: 35px;
 }
 .our-projects-left .portfolio-link {
@@ -1632,6 +1650,10 @@ main {
     line-height: 16px;
   }
 }
+.counter-text__item {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
 .counter__item_left {
   border-left: 3px solid #8dc63f;
   margin-left: -24px;
@@ -1834,6 +1856,7 @@ footer {
 @media screen and (max-width: 986px) {
   .footer-top__left {
     width: 100%;
+    padding-left: 0;
   }
 }
 @media screen and (max-width: 425px) {
@@ -1848,6 +1871,11 @@ footer {
   }
   .footer-top__left span {
     width: 245px!important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .footer-top__left .section-title {
+    padding-left: 14px;
   }
 }
 .footer-top__right {

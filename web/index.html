@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru-RU">
   <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
     <meta id="myViewport" name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link href="js/slick/slick.css" rel="stylesheet">
@@ -29,7 +30,7 @@
           </nav>
           <div class="header-main-param">
             <div class="dropdown">
-              <div class="dropbtn"><span>en</span></div>
+              <div class="dropbtn"><span class="dropbtn__lang">en</span></div>
               <div class="dropdown-content"><a href="#">ua</a><a href="#">en</a></div>
             </div>
             <div class="search_bar">
@@ -187,13 +188,13 @@
               <div class="container">
                 <div class="counter">
                   <div class="counter__item counter__item_left">
-                    <div class="counter-text"><span>40</span><span class="counter-text">million dollars worth of property developments</span></div>
+                    <div class="counter-text"><span class="counter-text__item counter-text__item_worth">40</span><span>million dollars worth of property developments</span></div>
                   </div>
                   <div class="counter__item counter__item_middle">
-                    <div class="counter-text"><span>7</span><span class="counter-text">ha of land under development</span></div>
+                    <div class="counter-text"><span class="counter-text__item counter-text__item_land">7</span><span>ha of land under development</span></div>
                   </div>
                   <div class="counter__item counter__item_right">
-                    <div class="counter-text"><span>8</span><span class="counter-text">years in the investment market</span></div>
+                    <div class="counter-text"><span class="counter-text__item counter-text__item_years">8</span><span>years in the investment market</span></div>
                   </div>
                 </div>
               </div>
@@ -299,12 +300,11 @@
       <div class="footer-bottom">
         <div class="left-side footer-bottom__item"><span>© 2015 Standard development, All rigths reserved.</span></div>
         <div class="miidle-side footer-bottom__item"><a class="facebook" href="#"></a><a class="twitter-logo twitter" href="#"></a><a class="vk" href="#"></a></div>
-        <div class="right-side footer-bottom__item"><span><span>by</span><span class="develop-company">OTAKOYI</span>
-            <div class="otakoyi-logo"></div></span></div>
+        <div class="right-side footer-bottom__item"><span><span>by</span><span class="develop-company">OTAKOYI</span><span class="otakoyi-logo"></span></span></div>
       </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/slick/slick.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="js/babel/main.js"></script>
   </body>
 </html>

@@ -4,6 +4,7 @@
 main {
   background: url(../img/slanting-bg.png);
   background-position: -22px -57px;
+  background-repeat: no-repeat;
   padding-top: 70px;
 }
 .about__header {
@@ -35,7 +36,7 @@ main {
 }
 .about-text__left {
   @media screen and (max-width: 991px) {
-      width: 100%;
+      width: 94%;
   }
 }
 .about-right__img {
@@ -85,6 +86,7 @@ main {
     line-height: 35px;
     @media screen and (max-width: 991px) {
       font-size: 16px;
+
     }
   }
   @media screen and (max-width: 1200px) {
@@ -92,10 +94,11 @@ main {
     width: 505px;
   }
   @media screen and (max-width: 991px) {
-    width: 100%;
+    width: 96%;
     margin-bottom: 25px;
-    padding-left: 0px;
-    padding-right: 0px;
+    text-align: justify;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -166,11 +169,17 @@ main {
     span {
       padding-top: 21px;
     }
+    @media screen and (max-width: 320px) {
+      padding-left: 0;
+      .section-title__img {
+        margin-right: 0;
+      }
+    }
   }
 
 }
 .our-projects-left {
-  width: 58%;
+  width: 53%;
   margin-bottom: 35px;
   .portfolio-link {
     padding-left: 85px;
@@ -455,6 +464,9 @@ align-items: inherit;
     }
   }
 
+}
+.counter-text__item {
+  transition: all 0.3s ease
 }
 .counter__item_left {
   border-left: 3px solid @forest-green;

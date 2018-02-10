@@ -135,6 +135,7 @@ header {
 }
 //===== mobile menu btn ====
 .show-mobile-menu {
+  z-index: 200;
   display: none;
   margin-left: 15px;
   button {
@@ -186,7 +187,11 @@ header {
 
   }
 }
-
+.show-mobile-menu__btn {
+  &:hover {
+    cursor: pointer;
+  }
+}
 
 
 //===========  LANGUAGE BTN  =============
@@ -239,6 +244,9 @@ header {
       color: @green;
     }
   }
+}
+.dropbtn__lang {
+  transition: all 0.3s ease;
 }
 
 
@@ -410,7 +418,7 @@ header {
     font-family: "Acrom ExtraBold", serif;
     display: block;
     margin-top: 32px;
-    max-height: 159px;
+    max-height: 143px;
     overflow: hidden;
     font-size: 65px;
     font-weight: 400;
