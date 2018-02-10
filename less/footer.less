@@ -1,3 +1,6 @@
+footer {
+  margin-top: 125px;
+}
 .footer-top-inner {
   display: flex;
   flex-wrap: wrap;
@@ -9,26 +12,44 @@
 .footer-top {
   background-color: @footer-t-back;
   padding: 60px 0px;
+  padding-bottom: 84px;
 }
 
 .footer-top__right_inner {
   padding-top: 25px;
 }
 .footer-top__left, .footer-top__right {
-  min-width: 390px;
+  min-width: 320px;
 
 }
 .footer-top__left {
+  padding-left: 20px;
   width: 40%;
+  .contact-title {
+    span {
+      padding-top: 26px;
+      width: 335px;
+    }
+  }
   @media screen and (max-width: 986px) {
     width: 100%;
   }
   @media screen and (max-width: 425px) {
+    padding-left: 0px;
     min-width: 320px;
+  }
+  @media screen and (max-width: 375px) {
+    .section-title__img {
+      margin-right: 0;
+    }
+    span {
+      width: 245px!important;
+    }
   }
 }
 .footer-top__right {
-  width: 54.5%;
+  padding-top: 3px;
+  width: 52.38%;
   @media screen and (max-width: 986px) {
     width: 100%;
   }
@@ -83,7 +104,7 @@
 }
 //contact form
 .write-us-title {
-  padding-bottom: 60px;
+  padding-bottom: 73px;
   span {
     text-transform: uppercase;
     font-size: 45px;
@@ -122,7 +143,7 @@
     color: #ffffff;
     border: none;
     border-radius: 4px;
-    padding: 12px 14px;
+    padding: 14px 23px;
     font-weight: 500;
     @media screen and (max-width: 575px) {
       width: 100%;
@@ -155,8 +176,8 @@
     }
   }
   .message {
-    padding-bottom: 56px;
-    padding-top: 56px;
+    padding-bottom: 61px;
+    padding-top: 49px;
     display: block;
     input {
       width: 99%;
